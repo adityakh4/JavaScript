@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>List Even Numbers</title>
+  </head>
+  <body>
+    <h1>List Even Numbers</h1>
+    <form>
+      <label for="number">Enter a positive number:</label>
+      <input type="number" id="number" name="number" required>
+      <br><br>
+      <input type="button" value="List Even Numbers" onclick="listEvenNumbers()">
+    </form>
+    <br>                 
+    <p id="result"></p>
+    <script>
+      function listEvenNumbers() {
+        const n = parseInt(document.getElementById("number").value);
+        let i = 1;
+        let result = "";
+        while (i <= n) {
+          if (i % 2 === 0) {
+            result += i + " ";
+          }
+          i++;
+        }
+        document.getElementById("result").innerHTML = "Even numbers: " + result;
+      }
+    </script>
+  </body>
+</html>

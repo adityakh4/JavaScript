@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Multiplication Table</title>
+  </head>
+  <body>
+    <h1>Multiplication Table</h1>
+    <form>
+      <label for="number">Enter a positive number:</label>
+      <input type="number" id="number" name="number" required>
+      <br><br>
+      <input type="button" value="Print Multiplication Table" onclick="printMultiplicationTable()">
+    </form>
+    <br>
+    <p id="result"></p>
+    <script>
+      function printMultiplicationTable() {
+        const number = parseInt(document.getElementById("number").value);
+        let i = 1;
+        let result = "";
+        while (i <= 10) {
+          const multiplicationResult = i * number;
+          if (i === 1) {
+            result += `${number}*${i}=${multiplicationResult}<br>`;
+          } else if (i === 2) {
+            result += `${number}*${i}=${multiplicationResult}<br>`;
+          } else if (i === 3) {
+            result += `${number}*${i}=${multiplicationResult}<br>`;
+          } else if (i === 4) {
+            result += `${number}*${i}=${multiplicationResult}<br>`;
+          } else if (i === 5) {
+            result += `${number}*${i}=${multiplicationResult}<br>`;
+          } else if (i === 6) {
+            result += `${number}*${i}=${multiplicationResult}<br>`;
+          } else if (i === 7) {
+            result += `${number}*${i}=${multiplicationResult}<br>`;
+          } else if (i === 8) {
+            result += `${number}*${i}=${multiplicationResult}<br>`;
+          } else if (i === 9) {
+            result += `${number}*${i}=${multiplicationResult}<br>`;
+          } else {
+            result += `${number}*${i}=${multiplicationResult}<br>`;
+          }
+          i++;
+        }
+        document.getElementById("result").innerHTML = result;
+      }
+    </script>
+  </body>
+</html>

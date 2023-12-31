@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test min() function</title>
+    <script>
+      function findMin() {
+        let minNum = arguments[0];
+        for (let i = 1; i < arguments.length; i++) {
+          if (arguments[i] < minNum) {
+            minNum = arguments[i];
+          }
+        }
+        document.getElementById("result").innerHTML = "The minimum number is " + minNum;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Test min() function</h1>
+    <input type="button" value="try" onclick="findMin(3, 5, 1, 7, 2)" id="testmin">
+    <div id="result"></div>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weekday Short Format</title>
+    <script>
+      function getWeekDay(date) {
+        let days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+        return days[date.getDay()];
+      }
+
+      function displayWeekDay() {
+        let date = new Date(2012, 0, 3);
+        alert(getWeekDay(date));
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Weekday Short Format</h1>
+    <input type="button" value="Get Weekday" onclick="displayWeekDay()">
+  </body>
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>Today's Weekday</title>
+    <script>
+      function getWeekday() {
+        let days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+        let date = new Date();
+        let today = days[date.getDay()];
+        alert("Today is " + today);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Today's Weekday</h1>
+    <input type="button" value="Get Today's Weekday" onclick="getWeekday()">
+  </body>
+</html>
+ -->

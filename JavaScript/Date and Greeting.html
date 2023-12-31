@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Date and Greeting</title>
+    <style>
+      #greeting {
+        font-size: 24px;
+      }
+    </style>
+    <script>
+      function displayDateAndGreeting() {
+        let date = new Date();
+        let daysLeft = new Date(date.getFullYear(), 11, 31) - date;
+        daysLeft = Math.ceil(daysLeft / (1000 * 60 * 60 * 24));
+        
+        let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric' };
+        let formattedDate = date.toLocaleDateString('en-US', options);
+        let hour = date.getHours();
+
+        let greeting;
+        if (hour < 12) {
+          greeting = "Good Morning";
+        } else if (hour < 18) {
+          greeting = "Good Afternoon";
+        } else {
+          greeting = "Good Evening";
+        }
+
+        document.getElementById('date').innerText = "Today is " + formattedDate;
+        document.getElementById('greeting').innerText = "Welcome, and " + greeting + " to You";
+        document.getElementById('daysLeft').innerText = "Number of days left till end of year: " + daysLeft;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Date and Greeting</h1>
+    <div id="date"></div>
+    <div id="greeting"></div>
+    <div id="daysLeft"></div>
+    <button onclick="displayDateAndGreeting()">Display Date and Greeting</button>
+  </body>
+</html>

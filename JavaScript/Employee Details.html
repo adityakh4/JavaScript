@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Employee Details</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      th, td {
+        border: 1px solid black;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Employee Details</h1>
+    <table>
+      <tr>
+        <th>Employee ID</th>
+        <th>Employee Name</th>
+        <th>Salary</th>
+      </tr>
+      <script>
+        let employees = [
+          { empid: 1, empname: 'John Doe', salary: 50000 },
+          { empid: 2, empname: 'Jane Smith', salary: 60000 },
+          { empid: 3, empname: 'Bob Johnson', salary: 55000 },
+          { empid: 4, empname: 'Alice Williams', salary: 58000 }
+        ];
+        employees.forEach(function(employee) {
+          document.write(`<tr><td>${employee.empid}</td><td>${employee.empname}</td><td>${employee.salary}</td></tr>`);
+        });
+      </script>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Print Message</title>
+        <script>
+            function printMessage() {
+                var times = parseInt(document.getElementById("times").value);
+                var message = document.getElementById("message").value;
+
+                var output = "";
+                for (var i = 0; i < times; i++) {
+                    output += message + "<br>";
+                }
+                document.getElementById("output").innerHTML = output;
+            }
+        </script>
+    </head>
+    <body>
+        <label for="times">Number of times to print:</label> <input type="number" id="times" name="times" /> <br />
+        <br />
+        <label for="message">Message:</label> <input type="text" id="message" name="message" /> <br />
+        <br />
+        <button onclick="printMessage()">Print Message</button> <br />
+        <br />
+        <div id="output"></div>
+    </body>
+</html>

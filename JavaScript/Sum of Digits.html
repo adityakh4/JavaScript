@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sum of Digits</title>
+    <script>
+      function calculateSumOfDigits() {
+        let number = document.getElementById('number').value;
+        let sum = 0;
+        while (number) {
+          sum += number % 10;
+          number = Math.floor(number / 10);
+        }
+        document.getElementById('result').innerHTML = "Sum of Digits: " + sum;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Sum of Digits Calculator</h1>
+    <label for="number">Enter a five-digit number:</label>
+    <input type="number" id="number" name="number" required>
+    <br><br>
+    <input type="button" value="Calculate Sum of Digits" onclick="calculateSumOfDigits()">
+    <br><br>
+    <p id="result"></p>
+  </body>
+</html>

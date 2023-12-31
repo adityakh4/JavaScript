@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Compound Interest Calculator</title>
+    <script>
+      function calculateCompoundInterest() {
+        let principal = parseFloat(document.getElementById('principal').value);
+        let rate = parseFloat(document.getElementById('rate').value) / 100;
+        let time = parseFloat(document.getElementById('time').value);
+        let n = parseFloat(document.getElementById('frequency').value);
+        let result = compoundInterest(principal, rate, time, n);
+        document.getElementById('result').innerHTML = "Compound Interest: " + result.toFixed(2);
+      }
+
+      function compoundInterest(principal, rate, time, n) {
+        return principal * Math.pow(1 + rate/n, n*time) - principal;
+      }
+    </script>
+    <style>
+      input {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Compound Interest Calculator</h1>
+    <input type="number" id="principal" placeholder="Principal Amount">
+    <input type="number" id="rate" placeholder="Annual Interest Rate (%)">
+    <input type="number" id="time" placeholder="Time Period (years)">
+    <input type="number" id="frequency" placeholder="Compounding Frequency">
+    <input type="button" value="Calculate" onclick="calculateCompoundInterest()">
+    <div id="result"></div>
+  </body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>Compound Interest Calculator</title>
+    <script>
+      function calculateCompoundInterest() {
+        let principal = 1000;
+        let rate = 10 / 100;
+        let time = 1;
+        let result = compoundInterest(principal, rate, time);
+        document.getElementById('result').innerHTML = "Compound Interest: $" + result.toFixed(2);
+      }
+
+      function compoundInterest(principal, rate, time) {
+        return principal * Math.pow(1 + rate, time) - principal;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Compound Interest Calculator</h1>
+    <input type="button" value="Calculate" onclick="calculateCompoundInterest()">
+    <div id="result"></div>
+  </body>
+</html>
+
+ -->

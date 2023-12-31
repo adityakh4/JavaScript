@@ -1,0 +1,29 @@
+<html>  
+<head>  
+<h2> Javascript Promise</h2>  
+</br> </head>  
+<body>  
+<script>  
+var p=new Promise(function(resolve, reject){  
+var x= 2+3;  
+if(x==5)  
+    resolve(" executed and resolved successfully");  
+else  
+    reject("rejected");  
+});  
+ p.then(function(fromResolve){  
+ document.write("Promise is"+fromResolve);  
+ }).catch(function(fromReject){  
+ document.write("Promise is "+fromReject);  
+ });  
+
+ function funnc1(){
+    return new promise(function(resolve,reject){
+        setTimeout(()=>{resolve('Hello World')},4000);
+    })
+ }
+
+
+</script>  
+</body>  
+</html>  
